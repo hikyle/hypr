@@ -1,0 +1,18 @@
+{
+	"label": "logout",
+	"action": "~/.config/hypr/scripts/power.sh exit",
+	"text": "Logout",
+	"keybind": "l"
+}
+{
+	"label": "shutdown",
+	"action": "~/.config/hypr/scripts/power.sh shutdown",
+	"text": "Shutdown",
+	"keybind": "s"
+}
+{
+	"label": "reboot",
+	"action": "~/.config/hypr/scripts/power.sh reboot",
+	"text": "Reboot",
+	"keybind": "r"
+}

@@ -1,0 +1,106 @@
+{
+	"layer": "top",
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+	"spacing": 0,
+
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces"
+	],
+
+	"modules-center": [
+		"hyprland/window"
+	],
+
+	"modules-right": [
+		"pulseaudio#output",
+		"pulseaudio#input",
+		"tray",
+		"clock",
+		"custom/exit"
+	],
+
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"active-only": false,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 1
+		}
+	},
+
+	"hyprland/window": {
+		"max-length": 60,
+		"separate-outputs": true,
+		"rewrite": {
+			"(.*) - Discord": "  $1",
+			"Steam": "  Steam",
+			"(.*) - Twitch — Mozilla Firefox$": " $1",
+			"^Twitch — Mozilla Firefox$": " Twitch",
+			"(.*) - YouTube — Mozilla Firefox$": " $1",
+			"^YouTube — Mozilla Firefox$": " YouTube",
+			"Netflix — Mozilla Firefox": "󰝆 Netflix",
+			"Home - Netflix — Mozilla Firefox": "󰝆 Netflix",
+			"(.*) - (.*) - Code - OSS$": " $1"
+		}
+	},
+
+	"pulseaudio#input": {
+		"format-source": " {volume}%",
+		"format-source-muted": "  MUTED",
+		"format": "{format_source}",
+		"scroll-step": 1,
+		"smooth-scrolling-threshold": 1,
+		"max-volume": 100,
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"on-click-middle": "pavucontrol",
+		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+	},
+
+	"pulseaudio#output": {
+		"format": "{icon} {volume}%",
+		"format-muted": " MUTED",
+		"format-icons": {
+			"headphone": "",
+			"default": ["", "", ""]
+		},
+		"max-volume": 100,
+		"scroll-step": 2,
+		"smooth-scrolling-threshold": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-middle": "pavucontrol"
+	},
+
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+
+	"clock": {
+		"format": "  {:%I:%M %p %A}",
+		"timezone": "America/New_York",
+		"tooltip": false
+	},
+
+	"custom/exit": {
+		"format": " ",
+		"on-click": "wlogout",
+		"tooltip": false
+	},
+
+	"custom/launcher": {
+		"format": "",
+		"tooltip": false,
+		"tooltip-format": "Left click: Rofi",
+		"on-click": "rofi -show drun -replace -i"
+	}
+}
