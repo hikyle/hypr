@@ -49,7 +49,9 @@
 			"^YouTube — Mozilla Firefox$": " YouTube",
 			"Netflix — Mozilla Firefox": "󰝆 Netflix",
 			"Home - Netflix — Mozilla Firefox": "󰝆 Netflix",
-			"(.*) - (.*) - Code - OSS$": " $1"
+			"(.*) - (.*) - Code - OSS$": " $1",
+			"^(.*) — Mozilla Firefox$": "󰈹 $1",
+			"Mozilla Firefox": "󰈹 Firefox"
 		}
 	},
 
