@@ -2,17 +2,21 @@
 	font-family: "Inter Nerd Font Propo";
 	font-size: 18px;
 	color: #ffffff;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 #waybar {
 	background: rgba(26, 26, 26, 0.5);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 window#waybar.empty #window {
 	background-color: transparent;
+}
+
+#workspaces label {
+	font-size: 13px;
 }
 
 #workspaces button.active label {
@@ -47,7 +51,7 @@ window#waybar.empty #window {
 #custom-exit {
 	margin-right: 5px;
 	color: #bface2;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 #custom-launcher {
@@ -60,7 +64,7 @@ window#waybar.empty #window {
 }
 
 #tray menu {
-	background-color: rgba(0, 0, 0, 0.55);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 #tray menu menuitem:hover {
