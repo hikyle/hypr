@@ -41,7 +41,7 @@
 		"max-length": 60,
 		"separate-outputs": true,
 		"rewrite": {
-			"(.*) - Discord": "  $1",
+			"^(.*?)\\s*\\|\\s*.*- Discord$": " $1",
 			"Steam": "  Steam",
 			"(.*) - Twitch — Mozilla Firefox$": " $1",
 			"^Twitch — Mozilla Firefox$": " Twitch",
