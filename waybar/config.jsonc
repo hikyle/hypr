@@ -19,6 +19,7 @@
 		"pulseaudio#output",
 		"pulseaudio#input",
 		"tray",
+		"power-profiles-daemon",
 		"clock",
 		"custom/exit"
 	],
@@ -104,5 +105,17 @@
 		"tooltip": false,
 		"tooltip-format": "Left click: Rofi",
 		"on-click": "rofi -show drun -replace -i"
+	},
+
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+    		"default": "",
+    		"performance": "",
+    		"balanced": "",
+    		"power-saver": ""
+		}
 	}
 }
